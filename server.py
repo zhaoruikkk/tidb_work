@@ -5,6 +5,7 @@ import socket
 import time
 import os
 hostname = socket.gethostname()
+#get pod ip
 ip = socket.gethostbyname(hostname)
 
 HOST = ip
@@ -29,6 +30,7 @@ while True:
         if src.split('/')[1] == 'latency':
             print str(src.split('/')[2])
             print str(network_card)
+            #Set time delay
             cmd1 = "tc qdisc add dev " + str(network_card) + " root netem delay " + str(src.split('/')[2])
             cmd2 = "tc qdisc del dev " + str(network_card) + " root netem"
             #print cmd2
