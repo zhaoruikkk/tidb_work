@@ -4,7 +4,7 @@
 docker build -t worker:1.0
 
 注入容器：
-kubectl patch TidbCluster basic --patch "$(cat patch-file.yaml)" 
+kubectl patch TidbCluster basic --patch "$(cat add_container.yaml)" 
 
 查看结果：
 kubectl get TidbCluster basic --output yaml
