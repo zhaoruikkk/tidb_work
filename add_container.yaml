@@ -1,6 +1,0 @@
-spec:
-  template:
-    spec:
-      containers:
-      - name: add_container
-        image: worker:1.0
